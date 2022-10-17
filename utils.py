@@ -94,7 +94,7 @@ def get_status(x):
         return "PERFECT"
     elif x["STATUS"] in ["Cerrado", "Cancelado"] and x["mobile_status"] == "canceled":
         return "OK Canceled"
-    elif x["STATUS"] in ["Ejecución del pedido pendiente"] and x["mobile_status"] in [
+    elif x["STATUS"] in ["Ejecución de la orden pendiente"] and x["mobile_status"] in [
         "order_confirmed",
         "order_preparation",
         "on_way_to_second_deliver",
@@ -106,7 +106,7 @@ def get_status(x):
         "pending_payment"
     ]:
         return "OK payment pending"
-    elif x["STATUS"] in ["Ejecución del pedido pendiente"] and x["mobile_status"] in [
+    elif x["STATUS"] in ["Ejecución de la orden pendiente"] and x["mobile_status"] in [
         "pending_payment"
     ]:
         return "OK payment pending"
